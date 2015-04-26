@@ -3,6 +3,8 @@
 <ul>
   <% @ideas.each do |idea| %>
  <li><strong> <%= idea.name %></strong> <%= link_to "Edit", edit_idea_path(idea)%> <%= button_to "Remove Bad Idea", idea_path(idea), method: :delete %> </li>
+
+<li>Tags <%= idea.category_name %></li>
  <p><%= idea.description %></p>
 
 

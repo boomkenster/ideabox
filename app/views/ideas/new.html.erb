@@ -5,8 +5,7 @@
     <%= f.label :description%>
     <%= f.text_field :description%>
 
-    <%= f.label :category %>
-    <!-- options_from_collection_for_select(@idea.all, :name) %> -->
+    <%= f.collection_select(:category_id, Category.all, :id, :name) %>
 
     <%= f.submit %>
 <% end %>

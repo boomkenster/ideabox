@@ -16,7 +16,7 @@ class IdeasController < ApplicationController
   end
 
   def index
-    @ideas = current_user.ideas.all
+    @ideas = current_user.ideas.map { |idea| IdeaPresenter.new(idea) }
   end
 
   def edit
@@ -47,6 +47,6 @@ class IdeasController < ApplicationController
   private
 
   def idea_params
-    params.require(:idea).permit(:name, :description)
+    params.require(:idea).permit(:name, :description, :category_id)
   end
 end
