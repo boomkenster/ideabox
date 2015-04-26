@@ -1,0 +1,12 @@
+<h1>List of Images</h1>
+
+<tbody>
+  <tr>
+    <% @images.each do |image| %>
+    <td><%= image.picture.url %></td>
+
+    <% end %>
+  </tr>
+</tbody>
+
+ <%= button_to "Create Image", new_admin_image_path, method: :get %>

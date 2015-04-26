@@ -19,4 +19,5 @@ class IdeaPresenter
   def to_param
     @idea.to_param
   end
+  
 end

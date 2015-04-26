@@ -16,7 +16,7 @@ class IdeasController < ApplicationController
   end
 
   def index
-    @ideas = current_user.ideas.map { |idea| IdeaPresenter.new(idea) }
+    @ideas = current_user.ideas.all.map { |idea| IdeaPresenter.new(idea) }
   end
 
   def edit
@@ -41,8 +41,6 @@ class IdeasController < ApplicationController
     @idea.destroy
     redirect_to ideas_path
   end
-
-
 
   private
 
