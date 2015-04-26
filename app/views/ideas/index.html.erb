@@ -1,0 +1,12 @@
+<h1>All Them Ideas</h1>
+
+<ul>
+  <% @ideas.each do |idea| %>
+ <li><strong> <%= idea.name %></strong> <%= link_to "Edit", edit_idea_path(idea)%> <%= button_to "Remove Bad Idea", idea_path(idea), method: :delete %> </li>
+ <p><%= idea.description %></p>
+
+
+<% end %>
+</ul>
+
+<%= button_to "Add New Idea", new_idea_path, method: :get %>

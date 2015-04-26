@@ -1,0 +1,12 @@
+<h1>List of Categories</h1>
+
+<tbody>
+  <tr>
+    <% @categories.each do |category| %>
+    <td><%= category.name %><%= button_to "Remove", admin_category_path(category), method: :delete %></td>
+
+    <% end %>
+  </tr>
+</tbody>
+
+ <%= button_to "Create New Category", new_admin_category_path, method: :get %>
