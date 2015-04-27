@@ -3,8 +3,7 @@
 <tbody>
   <tr>
     <% @images.each do |image| %>
-    <td><%= image.picture.url %></td>
-
+    <td><img src="<%= image.picture %>" ></td> 
     <% end %>
   </tr>
 </tbody>
